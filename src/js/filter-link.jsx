@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import {setVisibilityFilter} from './action-creators'
 
+import {setVisibilityFilter} from './action-creators'
 
 
 const mapStateToProps = (state, ownProps) => ({
