@@ -1,9 +1,8 @@
-import uuidv4 from "@bundled-es-modules/uuid/v4.js"
 import * as C from './constants'
 
-export const addBottle = (name, colour, detail) => ({
+export const addBottle = (id, name, colour, detail) => ({
   type : C.ADD_BOTTLE,
-  id   : uuidv4(),
+  id   : id,
   name,
   colour,
   detail

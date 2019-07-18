@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import uuidv4 from "@bundled-es-modules/uuid/v4.js"
 import {connect} from 'react-redux'
 import {addBottle} from './action-creators'
 import * as C from './constants'
@@ -28,7 +29,7 @@ let AddBottleWrapped = ({dispatch}) => {
     </div>
     <div className="uk-card-footer">
         <button className="uk-button uk-button-primary" onClick={()=> {
-            dispatch(addBottle(input$name.value, select$color.value, textarea$detail.value))
+            dispatch(addBottle(uuidv4(),input$name.value, select$color.value, textarea$detail.value))
             input$name.value = '';
             select$color.value = '';
             textarea$detail.value = '';
