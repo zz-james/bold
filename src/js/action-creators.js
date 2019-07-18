@@ -1,7 +1,6 @@
 import uuidv4 from "@bundled-es-modules/uuid/v4.js"
 import * as C from './constants'
 
-let nextTodoId = 0; // my build system will not deal with node--uuid package see issue:
 export const addBottle = (name, colour, detail) => ({
   type : C.ADD_BOTTLE,
   id   : uuidv4(),
