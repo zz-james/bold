@@ -21,4 +21,4 @@ Run compiled version at /static/
 
 **Note:** Styling is with UIKIT library included as a static css file.
 
-**Note:** Did not have time to do the testing but general strategy is to unit test using the actioin/creators making assertions on the state object, react components can be tested with dom snapshots or value tested against React virtual dom objects.
+**Note:** Did not have time to do the testing but general strategy is to unit test using the action/creators making assertions on the state object, react components can be tested with dom snapshots or value tested against React virtual dom objects.
