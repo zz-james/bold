@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 
+import {Footer} from './footer.jsx'
 import {showDetail, setUiMode} from './action-creators'
-import * as C from './constants';
+import * as C from './constants'
 
 /**
  * filters the bottle list by colour
@@ -38,7 +39,7 @@ const Bottle = ({
   detail
 }) => (
   <li onClick={onClick}>
-    {name}
+    <span className="uk-button uk-button-text">{name}</span>
   </li> 
 )
 
@@ -51,14 +52,23 @@ const BottleList = ({
   bottles,
   onBottleClick
 }) => (
-  <div>
-    <p>Click the bottle to see details</p>
+
+
+<div className="uk-card uk-card-default uk-width-xlarge">
+  <div className="uk-card-header">
+    Click the bottle to see details
+  </div>
+  <div className="uk-card-body">
     <ul>
       {bottles.map(bottle => 
         <Bottle key={bottle.id} {...bottle} onClick={()=>onBottleClick(bottle.id)}/>
       )}
     </ul>
   </div>
+  <div className="uk-card-footer">
+      <Footer />
+  </div>
+</div>
 )
 
 

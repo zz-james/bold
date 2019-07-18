@@ -8,17 +8,18 @@ import * as C from './constants'
  */
 export const TabBar = () => {
   return (
-    <p>
-      Show:
-      {' '}
+    <nav className="uk-navbar-container uk-navbar uk-navbar-transparent" role="navigation" aria-label="main navigation">
+      <ul className="uk-tab">
+
       <TabLink
         mode={C.LIST}
-      >LIST</TabLink>
-      {' '}
+      >ALL WINES</TabLink>
+
       <TabLink
         mode={C.EDIT}
       >ADD NEW</TabLink>
-      {' '}
-    </p>
+
+      </ul>
+    </nav>
   );
 }

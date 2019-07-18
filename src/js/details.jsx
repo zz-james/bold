@@ -7,10 +7,16 @@ const mapStateToProps = (state) => ({
 
 const DetailsWrapped = ({record}) => {
   return (
-    <div>
-      <p>{record.name}</p>
-      <p>{record.colour}</p>
-      <p>{record.detail}</p>
+    <div className="uk-card uk-card-default uk-width-xlarge">
+        <div className="uk-card-header">
+          {record.name}
+        </div>
+        <div className="uk-card-body">
+            <p>{record.detail}</p>
+        </div>
+        <div className="uk-card-footer">
+            <p href="#" className="uk-button uk-button-text">Colour: {record.colour}</p>
+        </div>
     </div>
   )
 }

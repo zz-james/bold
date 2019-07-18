@@ -5,7 +5,6 @@ import {AddBottle} from './add-bottle.jsx'
 import {VisibleBottlesList} from './visible-bottle-list.jsx'
 import {Details} from './details.jsx'
 import {TabBar} from './tab-bar.jsx'
-import {Footer} from './footer.jsx'
 import * as C from './constants'
 
 export const CellarAppWrapped = ({
@@ -15,10 +14,7 @@ export const CellarAppWrapped = ({
     <TabBar />
 
       {uimode == C.LIST ? (
-        <div>      
-          <VisibleBottlesList />
-          <Footer />
-        </div>
+        <VisibleBottlesList />
       ):null}
   
       {uimode == C.EDIT ? (

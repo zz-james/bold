@@ -16,11 +16,12 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 
 const Link = ({active, children, onClick}) => {
   if( active ) {
-    return <span>{children}</span>
+    return <span className="uk-button uk-button-default uk-border-pill">{children}</span>
   }
 
   return (
-    <a href='#'
+    <a className="uk-button uk-button-default uk-border-pill"
+       href='#'
        onClick = { e=> {
          e.preventDefault();
          onClick();
