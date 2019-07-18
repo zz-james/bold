@@ -19,3 +19,4 @@ I would like to explore the possibility of using the new react hooks API to mana
 
 **Note:** Styling is with UIKIT library included as a static css file.
 
+**Note:** Did not have time to do the testing but general strategy is to unit test using the actioin/creators making assertions on the state object, react components can be tested with dom snapshots or value tested against React virtual dom objects.
