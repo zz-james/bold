@@ -1,10 +1,13 @@
 {
   "name": "bold",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "code task for bold",
   "main": "src/js/app.js",
   "scripts": {
-    "test": "test"
+    "build": "npm run javascript && npm run static",
+    "javascript": "npx rollup -c",
+    "static": "rsync -rm src/static dist",
+    "test": "npm run javascript && node test/tests.js"
   },
   "repository": {
     "type": "git",
@@ -21,8 +24,23 @@
   },
   "homepage": "https://github.com/zz-james/bold#readme",
   "dependencies": {
+    "@bundled-es-modules/uuid": "^3.3.2-rc2",
+    "expect": "^24.8.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4",
     "rimraf": "^2.6.3",
     "rollup": "^1.17.0",
     "rollup-plugin-replace": "^2.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/preset-env": "^7.5.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-node-resolve": "^5.2.0"
   }
 }
