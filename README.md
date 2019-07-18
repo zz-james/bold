@@ -17,6 +17,8 @@ Dummy data can be replaced with an API fetch call, and saving data locally is ve
 
 I would like to explore the possibility of using the new react hooks API to manage state, but I have not had time to learn this, just to let you know I am aware of it and will be giving it some time soon.
 
+Run compiled version at /static/ 
+
 **Note:** Styling is with UIKIT library included as a static css file.
 
 **Note:** Did not have time to do the testing but general strategy is to unit test using the actioin/creators making assertions on the state object, react components can be tested with dom snapshots or value tested against React virtual dom objects.
